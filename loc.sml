@@ -60,21 +60,8 @@ struct
 
         fun column (T {column, ...}) = column
 
-        fun toString (T {filename, offset, line, column}) =
-            let val s = ref filename
-            in  if line > 0
-                    then (if String.size (!s) <> 0
-                              then s := !s ^ ":"
-                              else ();
-                          s := !s ^ Int.toString line;
-                          if column <> 0
-                              then s := !s ^ "." ^ Int.toString column
-                              else ())
-                    else ();
-                if String.size (!s) = 0
-                    then "-"
-                    else !s
-            end
+        fun toString (T {filename, line, column, ...}) =
+            filename ^ ":" ^ Int.toString line ^ "." ^ Int.toString column
     end
 
     structure Pos =
