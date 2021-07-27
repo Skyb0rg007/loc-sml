@@ -1,0 +1,8 @@
+local
+    $(SML_LIB)/basis/basis.mlb
+    loc.sig
+    loc.sml
+in
+    signature LOC
+    structure Loc
+end

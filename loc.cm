@@ -1,0 +1,7 @@
+Library
+    signature LOC
+    structure Loc
+is
+    loc.sig
+    loc.sml
+    $/basis.cm
