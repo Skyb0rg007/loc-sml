@@ -35,6 +35,8 @@ sig
     sig
         type t
 
+        (* [size file] is the size of the file in bytes *)
+        val size : t -> int
         (* [addLine (file, offset)] registers the given offset as the first character on a given line.
          * So if offset 20 is a newline, [addLine (file, 21)] would register that fact.
          *)

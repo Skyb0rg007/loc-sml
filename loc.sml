@@ -82,6 +82,8 @@ struct
             lines: int DynArray.t
         }
 
+        fun size (T {size, ...}) = size
+
         fun pos (T {base, size, ...}, offset) =
             if offset > size
             then raise Fail (String.concat
